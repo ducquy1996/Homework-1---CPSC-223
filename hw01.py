@@ -67,11 +67,16 @@ def largest_factor(n):
     >>> largest_factor(13) # factor is 1 since 13 is prime
     1
     """
-    "*** YOUR CODE HERE ***"
+    factor = n -1
+    while factor > 0:
+        if n % factor == 0:
+            return factor
+        factor -= 1
+    return 1   
 
 
 def hailstone(n):
-    """Print the hailstone sequence starting at n and return its
+    """Print the hailstone sequence sarting at n and return its
     length.
 
     >>> a = hailstone(10)
@@ -89,4 +94,14 @@ def hailstone(n):
     >>> b
     1
     """
-    "*** YOUR CODE HERE ***"
+    counting = 1 
+    while n != 1:
+        print(n)
+        counting += 1
+        if n % 2 == 0:
+            n = n // 2
+        else:
+            n = n * 3 + 1
+    print(n)
+
+    return counting
